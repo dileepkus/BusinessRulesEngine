@@ -1,4 +1,4 @@
-package spring.business.rules.engine;
+package spring.business.rules.engine.model;
 
 public class Product {
 	

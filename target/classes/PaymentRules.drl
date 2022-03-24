@@ -2,29 +2,29 @@
 import spring.business.rules.engine.Payment;
 
 rule "1"
-when(payment = physical product) then "generate packing slip" for "shipping"
+when Payment(payment = physical product) then "generate packing slip" for "shipping"
 end
 
 rule "2"
-when(payment = book) then "create a duplicate packing slip" for "royalty department"
+when Payment(payment = book) then "create a duplicate packing slip" for "royalty department"
 end
 
 rule "3"
-when(payment = membership) then "activate that membership"
+when Payment(payment = membership) then "activate that membership"
 end
 
 rule "4"
-when(payment = upgrade to a membership) then "apply the upgrade"
+when Payment(payment = upgrade to a membership) then "apply the upgrade"
 end
 
 rule "5"
-when(payment = membership ||  upgrade) then " e-mail the owner and inform them of the activation/upgrade"
+when Payment(payment = membership ||  upgrade) then " e-mail the owner and inform them of the activation/upgrade"
 end
 
 rule "6"
-when(payment = video “Learning to Ski") then "add a free “First Aid” video to the packing slip"
+when Payment(payment = video “Learning to Ski") then "add a free “First Aid” video to the packing slip"
 end
 
 rule "7"
-when(payment = physical product || a book) then "generate a commission payment to the agent"
+when Payment(payment = physical product || a book) then "generate a commission payment to the agent"
 end
