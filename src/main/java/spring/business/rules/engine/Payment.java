@@ -5,7 +5,18 @@ public class Payment {
 	private String type;
 	
 	private String action;
+	
+	private String generateAgentCommission;
+	
+	Membership membership;
+	
+	Product product;
 
+/*order - payment, product
+payment - generate agent commission payment, 
+product -  type,     physical product, book , video- “Learning to Ski" 
+membership - activate membership, upgrade membership
+*/	
 	public String getType() {
 		return type;
 	}
@@ -20,6 +31,14 @@ public class Payment {
 
 	public void setAction(String action) {
 		this.action = action;
+	}
+
+	public String getGenerateAgentCommission() {
+		return generateAgentCommission;
+	}
+
+	public void setGenerateAgentCommission(String generateAgentCommission) {
+		this.generateAgentCommission = generateAgentCommission;
 	}
 	
 }
